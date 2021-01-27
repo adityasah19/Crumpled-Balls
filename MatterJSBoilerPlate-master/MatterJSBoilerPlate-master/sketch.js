@@ -34,7 +34,9 @@ function draw() {
   ground.display()
   paper.display()
   
- 
 }
-
-
+function keyPressed(){
+	if(keyCode===UP_ARROW){
+		Matter.Body.applyForce(paperObject.body,paperObject.body.position,{x:100,y:100});
+	}
+}
